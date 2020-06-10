@@ -12,8 +12,10 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import { GlobalStyle } from 'styles/global-styles';
 
-import { HomePage } from './containers/HomePage/Loadable';
+import { OccupancyPage } from './containers/OccupancyPage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
+
+import 'antd/dist/antd.css';
 
 export function App() {
   return (
@@ -26,7 +28,7 @@ export function App() {
       </Helmet>
 
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={OccupancyPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
