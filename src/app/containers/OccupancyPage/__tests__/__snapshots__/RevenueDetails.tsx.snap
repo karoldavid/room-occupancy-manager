@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RevenueDetails /> should match the snapshot 1`] = `
+<div
+  class="ant-card"
+>
+  <div
+    class="ant-card-head"
+  >
+    <div
+      class="ant-card-head-wrapper"
+    >
+      <div
+        class="ant-card-head-title"
+      >
+        Test
+      </div>
+    </div>
+  </div>
+  <div
+    class="ant-card-body"
+  >
+    <p>
+      free: 4
+    </p>
+    <p>
+      usage: 3
+    </p>
+    <p>
+      revenue: 1234 EURO
+    </p>
+  </div>
+</div>
+`;
