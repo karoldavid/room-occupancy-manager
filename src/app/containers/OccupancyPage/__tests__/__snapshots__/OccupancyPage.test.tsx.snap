@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OccupancyPage /> should render and match the snapshot 1`] = `
+<React.Fragment>
+  <Helmet
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Occupancy Page
+    </title>
+    <meta
+      content="Room Occupancy Manager"
+      name="description"
+    />
+  </Helmet>
+  <Layout>
+    <PageHeader
+      className="site-page-header"
+      subTitle="Calculate the number of guests and revenue"
+      title="Room Occupation Manager"
+    />
+    <Divider
+      orientation="left"
+      style={
+        Object {
+          "color": "#333",
+          "fontWeight": "normal",
+        }
+      }
+    />
+    <Layout>
+      <Content
+        style={
+          Object {
+            "padding": "0 50px",
+          }
+        }
+      >
+        <Row
+          gutter={16}
+        >
+          <Col
+            className="gutter-row"
+            span={8}
+          >
+            Room Occupancy Form Component
+          </Col>
+        </Row>
+        <Divider
+          orientation="left"
+          style={
+            Object {
+              "color": "#333",
+              "fontWeight": "normal",
+            }
+          }
+        />
+        <Row
+          gutter={16}
+        >
+          <Col
+            span={8}
+          >
+            Revenue Details Component - Premium
+          </Col>
+          <Col
+            span={8}
+          >
+            Revenue Details Component - Economy
+          </Col>
+        </Row>
+      </Content>
+    </Layout>
+    <Footer>
+      Credits
+    </Footer>
+  </Layout>
+</React.Fragment>
+`;
