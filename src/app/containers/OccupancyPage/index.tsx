@@ -1,7 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Row, Col, Divider, Layout, PageHeader } from 'antd';
+import { RevenueDetails } from './RevenueDetails';
+import { RoomType } from './types';
+import { revenueDetailsData } from './mock/revenueDetailsData';
+import { revenueDetailsTitles } from './constants';
+
 const { Footer, Content } = Layout;
+
+const PREMIUM = RoomType.PREMIUM;
+const ECONOMY = RoomType.ECONOMY;
 
 export const OccupancyPage = () => {
   return (
@@ -32,8 +40,18 @@ export const OccupancyPage = () => {
               style={{ color: '#333', fontWeight: 'normal' }}
             />
             <Row gutter={16}>
-              <Col span={8}>Revenue Details Component - Premium</Col>
-              <Col span={8}>Revenue Details Component - Economy</Col>
+              <Col span={8}>
+                <RevenueDetails
+                  data={revenueDetailsData[PREMIUM]}
+                  title={revenueDetailsTitles[PREMIUM]}
+                />
+              </Col>
+              <Col span={8}>
+                <RevenueDetails
+                  data={revenueDetailsData[ECONOMY]}
+                  title={revenueDetailsTitles[ECONOMY]}
+                />
+              </Col>
             </Row>
           </Content>
         </Layout>
