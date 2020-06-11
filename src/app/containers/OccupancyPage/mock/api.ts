@@ -7,10 +7,11 @@ export interface MockResponse {
 const mockFetch = (
   success: boolean,
   timeout: number,
+  throwError: boolean,
 ): Promise<MockResponse> => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (success) {
+      if (!throwError && success) {
         const response: MockResponse = {
           data,
         };
@@ -22,9 +23,9 @@ const mockFetch = (
   });
 };
 
-export const fetchGuests = async () => {
+export const fetchGuests = async (throwError = false) => {
   try {
-    const response: MockResponse = await mockFetch(true, 1000);
+    const response: MockResponse = await mockFetch(true, 1000, throwError);
     return response;
   } catch (e) {
     console.log(e.message);
