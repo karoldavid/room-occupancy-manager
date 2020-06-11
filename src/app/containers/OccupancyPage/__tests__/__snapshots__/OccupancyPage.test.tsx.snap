@@ -1,103 +1,1275 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<OccupancyPage /> should render and match the snapshot 1`] = `
-<React.Fragment>
-  <Helmet
-    defer={true}
-    encodeSpecialCharacters={true}
-  >
-    <title>
-      Occupancy Page
-    </title>
-    <meta
-      content="Room Occupancy Manager"
-      name="description"
-    />
-  </Helmet>
-  <Layout>
-    <PageHeader
-      className="site-page-header"
-      subTitle="Calculate the number of guests and revenue"
-      title="Room Occupation Manager"
-    />
-    <Divider
-      orientation="left"
-      style={
-        Object {
-          "color": "#333",
-          "fontWeight": "normal",
-        }
-      }
-    />
-    <Layout>
-      <Content
-        style={
-          Object {
-            "padding": "0 50px",
-          }
-        }
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="ant-layout"
       >
-        <Row
-          gutter={16}
+        <div
+          class="ant-page-header site-page-header ant-page-header-ghost"
         >
-          <Col
-            className="gutter-row"
-            span={8}
+          <div
+            class="ant-page-header-heading"
           >
-            <AvailableRoomsForm
-              onFinish={[Function]}
-              title="Available Rooms"
-            />
-          </Col>
-        </Row>
-        <Divider
-          orientation="left"
-          style={
-            Object {
-              "color": "#333",
-              "fontWeight": "normal",
-            }
-          }
+            <div
+              class="ant-page-header-heading-left"
+            >
+              <span
+                class="ant-page-header-heading-title"
+                title="Room Occupation Manager"
+              >
+                Room Occupation Manager
+              </span>
+              <span
+                class="ant-page-header-heading-sub-title"
+                title="Calculate the number of guests and revenue"
+              >
+                Calculate the number of guests and revenue
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ant-divider ant-divider-horizontal"
+          role="separator"
+          style="color: rgb(51, 51, 51); font-weight: normal;"
         />
-        <Row
-          gutter={16}
+        <section
+          class="ant-layout"
         >
-          <Col
-            span={8}
+          <main
+            class="ant-layout-content"
+            style="padding: 0px 50px;"
           >
-            <RevenueDetails
-              data={
-                Object {
-                  "currency": "EURO",
-                  "free": 0,
-                  "total": 0,
-                  "usage": 0,
-                }
-              }
-              title="Premiun"
+            <div
+              class="ant-row"
+              style="margin-left: -8px; margin-right: -8px;"
+            >
+              <div
+                class="ant-col ant-col-8 gutter-row"
+                style="padding-left: 8px; padding-right: 8px;"
+              >
+                <div
+                  class="ant-card"
+                >
+                  <div
+                    class="ant-card-head"
+                  >
+                    <div
+                      class="ant-card-head-wrapper"
+                    >
+                      <div
+                        class="ant-card-head-title"
+                      >
+                        Available Rooms
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ant-card-body"
+                  >
+                    <form
+                      class="ant-form ant-form-horizontal"
+                      id="customized_form_controls"
+                    >
+                      <div
+                        class="ant-row ant-form-item"
+                      >
+                        <div
+                          class="ant-col ant-form-item-label"
+                        >
+                          <label
+                            class=""
+                            for="customized_form_controls_premium"
+                            title="Premiun"
+                          >
+                            Premiun
+                          </label>
+                        </div>
+                        <div
+                          class="ant-col ant-form-item-control"
+                        >
+                          <div
+                            class="ant-form-item-control-input"
+                          >
+                            <div
+                              class="ant-form-item-control-input-content"
+                            >
+                              <div
+                                class="ant-input-number"
+                              >
+                                <div
+                                  class="ant-input-number-handler-wrap"
+                                >
+                                  <span
+                                    aria-label="Increase Value"
+                                    class="ant-input-number-handler ant-input-number-handler-up"
+                                    role="button"
+                                    unselectable="unselectable"
+                                  >
+                                    <span
+                                      aria-label="up"
+                                      class="anticon anticon-up ant-input-number-handler-up-inner"
+                                      role="img"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class=""
+                                        data-icon="up"
+                                        fill="currentColor"
+                                        focusable="false"
+                                        height="1em"
+                                        viewBox="64 64 896 896"
+                                        width="1em"
+                                      >
+                                        <path
+                                          d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                  <span
+                                    aria-disabled="true"
+                                    aria-label="Decrease Value"
+                                    class="ant-input-number-handler ant-input-number-handler-down ant-input-number-handler-down-disabled"
+                                    role="button"
+                                    unselectable="unselectable"
+                                  >
+                                    <span
+                                      aria-label="down"
+                                      class="anticon anticon-down ant-input-number-handler-down-inner"
+                                      role="img"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class=""
+                                        data-icon="down"
+                                        fill="currentColor"
+                                        focusable="false"
+                                        height="1em"
+                                        viewBox="64 64 896 896"
+                                        width="1em"
+                                      >
+                                        <path
+                                          d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                </div>
+                                <div
+                                  class="ant-input-number-input-wrap"
+                                >
+                                  <input
+                                    aria-valuemax="999"
+                                    aria-valuemin="0"
+                                    aria-valuenow="0"
+                                    autocomplete="off"
+                                    class="ant-input-number-input"
+                                    id="customized_form_controls_premium"
+                                    max="999"
+                                    min="0"
+                                    role="spinbutton"
+                                    step="1"
+                                    type="number"
+                                    value="0"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="ant-row ant-form-item"
+                      >
+                        <div
+                          class="ant-col ant-form-item-label"
+                        >
+                          <label
+                            class=""
+                            for="customized_form_controls_economy"
+                            title="Economy"
+                          >
+                            Economy
+                          </label>
+                        </div>
+                        <div
+                          class="ant-col ant-form-item-control"
+                        >
+                          <div
+                            class="ant-form-item-control-input"
+                          >
+                            <div
+                              class="ant-form-item-control-input-content"
+                            >
+                              <div
+                                class="ant-input-number"
+                              >
+                                <div
+                                  class="ant-input-number-handler-wrap"
+                                >
+                                  <span
+                                    aria-label="Increase Value"
+                                    class="ant-input-number-handler ant-input-number-handler-up"
+                                    role="button"
+                                    unselectable="unselectable"
+                                  >
+                                    <span
+                                      aria-label="up"
+                                      class="anticon anticon-up ant-input-number-handler-up-inner"
+                                      role="img"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class=""
+                                        data-icon="up"
+                                        fill="currentColor"
+                                        focusable="false"
+                                        height="1em"
+                                        viewBox="64 64 896 896"
+                                        width="1em"
+                                      >
+                                        <path
+                                          d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                  <span
+                                    aria-disabled="true"
+                                    aria-label="Decrease Value"
+                                    class="ant-input-number-handler ant-input-number-handler-down ant-input-number-handler-down-disabled"
+                                    role="button"
+                                    unselectable="unselectable"
+                                  >
+                                    <span
+                                      aria-label="down"
+                                      class="anticon anticon-down ant-input-number-handler-down-inner"
+                                      role="img"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class=""
+                                        data-icon="down"
+                                        fill="currentColor"
+                                        focusable="false"
+                                        height="1em"
+                                        viewBox="64 64 896 896"
+                                        width="1em"
+                                      >
+                                        <path
+                                          d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                </div>
+                                <div
+                                  class="ant-input-number-input-wrap"
+                                >
+                                  <input
+                                    aria-valuemax="999"
+                                    aria-valuemin="0"
+                                    aria-valuenow="0"
+                                    autocomplete="off"
+                                    class="ant-input-number-input"
+                                    id="customized_form_controls_economy"
+                                    max="999"
+                                    min="0"
+                                    role="spinbutton"
+                                    step="1"
+                                    type="number"
+                                    value="0"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="ant-row ant-form-item"
+                      >
+                        <div
+                          class="ant-col ant-form-item-control"
+                        >
+                          <div
+                            class="ant-form-item-control-input"
+                          >
+                            <div
+                              class="ant-form-item-control-input-content"
+                            >
+                              <button
+                                class="ant-btn ant-btn-primary"
+                                type="submit"
+                              >
+                                <span>
+                                  Submit
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="ant-divider ant-divider-horizontal"
+              role="separator"
+              style="color: rgb(51, 51, 51); font-weight: normal;"
             />
-          </Col>
-          <Col
-            span={8}
+            <div
+              class="ant-row"
+              style="margin-left: -8px; margin-right: -8px;"
+            >
+              <div
+                class="ant-col ant-col-8"
+                style="padding-left: 8px; padding-right: 8px;"
+              >
+                <div
+                  class="ant-card"
+                >
+                  <div
+                    class="ant-card-head"
+                  >
+                    <div
+                      class="ant-card-head-wrapper"
+                    >
+                      <div
+                        class="ant-card-head-title"
+                      >
+                        Premiun
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ant-card-body"
+                  >
+                    <p>
+                      free: 0
+                    </p>
+                    <p>
+                      usage: 0
+                    </p>
+                    <p>
+                      revenue: 0 EURO
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ant-col ant-col-8"
+                style="padding-left: 8px; padding-right: 8px;"
+              >
+                <div
+                  class="ant-card"
+                >
+                  <div
+                    class="ant-card-head"
+                  >
+                    <div
+                      class="ant-card-head-wrapper"
+                    >
+                      <div
+                        class="ant-card-head-title"
+                      >
+                        Economy
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ant-card-body"
+                  >
+                    <p>
+                      free: 0
+                    </p>
+                    <p>
+                      usage: 0
+                    </p>
+                    <p>
+                      revenue: 0 EURO
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </section>
+        <footer
+          class="ant-layout-footer"
+        >
+          Credits
+        </footer>
+      </section>
+    </div>
+    <div>
+      <section
+        class="ant-layout"
+      >
+        <div
+          class="ant-page-header site-page-header ant-page-header-ghost"
+        >
+          <div
+            class="ant-page-header-heading"
           >
-            <RevenueDetails
-              data={
-                Object {
-                  "currency": "EURO",
-                  "free": 0,
-                  "total": 0,
-                  "usage": 0,
-                }
-              }
-              title="Economy"
+            <div
+              class="ant-page-header-heading-left"
+            >
+              <span
+                class="ant-page-header-heading-title"
+                title="Room Occupation Manager"
+              >
+                Room Occupation Manager
+              </span>
+              <span
+                class="ant-page-header-heading-sub-title"
+                title="Calculate the number of guests and revenue"
+              >
+                Calculate the number of guests and revenue
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ant-divider ant-divider-horizontal"
+          role="separator"
+          style="color: rgb(51, 51, 51); font-weight: normal;"
+        />
+        <section
+          class="ant-layout"
+        >
+          <main
+            class="ant-layout-content"
+            style="padding: 0px 50px;"
+          >
+            <div
+              class="ant-row"
+              style="margin-left: -8px; margin-right: -8px;"
+            >
+              <div
+                class="ant-col ant-col-8 gutter-row"
+                style="padding-left: 8px; padding-right: 8px;"
+              >
+                <div
+                  class="ant-card"
+                >
+                  <div
+                    class="ant-card-head"
+                  >
+                    <div
+                      class="ant-card-head-wrapper"
+                    >
+                      <div
+                        class="ant-card-head-title"
+                      >
+                        Available Rooms
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ant-card-body"
+                  >
+                    <form
+                      class="ant-form ant-form-horizontal"
+                      id="customized_form_controls"
+                    >
+                      <div
+                        class="ant-row ant-form-item"
+                      >
+                        <div
+                          class="ant-col ant-form-item-label"
+                        >
+                          <label
+                            class=""
+                            for="customized_form_controls_premium"
+                            title="Premiun"
+                          >
+                            Premiun
+                          </label>
+                        </div>
+                        <div
+                          class="ant-col ant-form-item-control"
+                        >
+                          <div
+                            class="ant-form-item-control-input"
+                          >
+                            <div
+                              class="ant-form-item-control-input-content"
+                            >
+                              <div
+                                class="ant-input-number"
+                              >
+                                <div
+                                  class="ant-input-number-handler-wrap"
+                                >
+                                  <span
+                                    aria-label="Increase Value"
+                                    class="ant-input-number-handler ant-input-number-handler-up"
+                                    role="button"
+                                    unselectable="unselectable"
+                                  >
+                                    <span
+                                      aria-label="up"
+                                      class="anticon anticon-up ant-input-number-handler-up-inner"
+                                      role="img"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class=""
+                                        data-icon="up"
+                                        fill="currentColor"
+                                        focusable="false"
+                                        height="1em"
+                                        viewBox="64 64 896 896"
+                                        width="1em"
+                                      >
+                                        <path
+                                          d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                  <span
+                                    aria-disabled="true"
+                                    aria-label="Decrease Value"
+                                    class="ant-input-number-handler ant-input-number-handler-down ant-input-number-handler-down-disabled"
+                                    role="button"
+                                    unselectable="unselectable"
+                                  >
+                                    <span
+                                      aria-label="down"
+                                      class="anticon anticon-down ant-input-number-handler-down-inner"
+                                      role="img"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class=""
+                                        data-icon="down"
+                                        fill="currentColor"
+                                        focusable="false"
+                                        height="1em"
+                                        viewBox="64 64 896 896"
+                                        width="1em"
+                                      >
+                                        <path
+                                          d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                </div>
+                                <div
+                                  class="ant-input-number-input-wrap"
+                                >
+                                  <input
+                                    aria-valuemax="999"
+                                    aria-valuemin="0"
+                                    aria-valuenow="0"
+                                    autocomplete="off"
+                                    class="ant-input-number-input"
+                                    id="customized_form_controls_premium"
+                                    max="999"
+                                    min="0"
+                                    role="spinbutton"
+                                    step="1"
+                                    type="number"
+                                    value="0"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="ant-row ant-form-item"
+                      >
+                        <div
+                          class="ant-col ant-form-item-label"
+                        >
+                          <label
+                            class=""
+                            for="customized_form_controls_economy"
+                            title="Economy"
+                          >
+                            Economy
+                          </label>
+                        </div>
+                        <div
+                          class="ant-col ant-form-item-control"
+                        >
+                          <div
+                            class="ant-form-item-control-input"
+                          >
+                            <div
+                              class="ant-form-item-control-input-content"
+                            >
+                              <div
+                                class="ant-input-number"
+                              >
+                                <div
+                                  class="ant-input-number-handler-wrap"
+                                >
+                                  <span
+                                    aria-label="Increase Value"
+                                    class="ant-input-number-handler ant-input-number-handler-up"
+                                    role="button"
+                                    unselectable="unselectable"
+                                  >
+                                    <span
+                                      aria-label="up"
+                                      class="anticon anticon-up ant-input-number-handler-up-inner"
+                                      role="img"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class=""
+                                        data-icon="up"
+                                        fill="currentColor"
+                                        focusable="false"
+                                        height="1em"
+                                        viewBox="64 64 896 896"
+                                        width="1em"
+                                      >
+                                        <path
+                                          d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                  <span
+                                    aria-disabled="true"
+                                    aria-label="Decrease Value"
+                                    class="ant-input-number-handler ant-input-number-handler-down ant-input-number-handler-down-disabled"
+                                    role="button"
+                                    unselectable="unselectable"
+                                  >
+                                    <span
+                                      aria-label="down"
+                                      class="anticon anticon-down ant-input-number-handler-down-inner"
+                                      role="img"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        class=""
+                                        data-icon="down"
+                                        fill="currentColor"
+                                        focusable="false"
+                                        height="1em"
+                                        viewBox="64 64 896 896"
+                                        width="1em"
+                                      >
+                                        <path
+                                          d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </span>
+                                </div>
+                                <div
+                                  class="ant-input-number-input-wrap"
+                                >
+                                  <input
+                                    aria-valuemax="999"
+                                    aria-valuemin="0"
+                                    aria-valuenow="0"
+                                    autocomplete="off"
+                                    class="ant-input-number-input"
+                                    id="customized_form_controls_economy"
+                                    max="999"
+                                    min="0"
+                                    role="spinbutton"
+                                    step="1"
+                                    type="number"
+                                    value="0"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="ant-row ant-form-item"
+                      >
+                        <div
+                          class="ant-col ant-form-item-control"
+                        >
+                          <div
+                            class="ant-form-item-control-input"
+                          >
+                            <div
+                              class="ant-form-item-control-input-content"
+                            >
+                              <button
+                                class="ant-btn ant-btn-primary"
+                                type="submit"
+                              >
+                                <span>
+                                  Submit
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="ant-divider ant-divider-horizontal"
+              role="separator"
+              style="color: rgb(51, 51, 51); font-weight: normal;"
             />
-          </Col>
-        </Row>
-      </Content>
-    </Layout>
-    <Footer>
-      Credits
-    </Footer>
-  </Layout>
-</React.Fragment>
+            <div
+              class="ant-row"
+              style="margin-left: -8px; margin-right: -8px;"
+            >
+              <div
+                class="ant-col ant-col-8"
+                style="padding-left: 8px; padding-right: 8px;"
+              >
+                <div
+                  class="ant-card"
+                >
+                  <div
+                    class="ant-card-head"
+                  >
+                    <div
+                      class="ant-card-head-wrapper"
+                    >
+                      <div
+                        class="ant-card-head-title"
+                      >
+                        Premiun
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ant-card-body"
+                  >
+                    <p>
+                      free: 0
+                    </p>
+                    <p>
+                      usage: 0
+                    </p>
+                    <p>
+                      revenue: 0 EURO
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ant-col ant-col-8"
+                style="padding-left: 8px; padding-right: 8px;"
+              >
+                <div
+                  class="ant-card"
+                >
+                  <div
+                    class="ant-card-head"
+                  >
+                    <div
+                      class="ant-card-head-wrapper"
+                    >
+                      <div
+                        class="ant-card-head-title"
+                      >
+                        Economy
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="ant-card-body"
+                  >
+                    <p>
+                      free: 0
+                    </p>
+                    <p>
+                      usage: 0
+                    </p>
+                    <p>
+                      revenue: 0 EURO
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </section>
+        <footer
+          class="ant-layout-footer"
+        >
+          Credits
+        </footer>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="ant-layout"
+    >
+      <div
+        class="ant-page-header site-page-header ant-page-header-ghost"
+      >
+        <div
+          class="ant-page-header-heading"
+        >
+          <div
+            class="ant-page-header-heading-left"
+          >
+            <span
+              class="ant-page-header-heading-title"
+              title="Room Occupation Manager"
+            >
+              Room Occupation Manager
+            </span>
+            <span
+              class="ant-page-header-heading-sub-title"
+              title="Calculate the number of guests and revenue"
+            >
+              Calculate the number of guests and revenue
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ant-divider ant-divider-horizontal"
+        role="separator"
+        style="color: rgb(51, 51, 51); font-weight: normal;"
+      />
+      <section
+        class="ant-layout"
+      >
+        <main
+          class="ant-layout-content"
+          style="padding: 0px 50px;"
+        >
+          <div
+            class="ant-row"
+            style="margin-left: -8px; margin-right: -8px;"
+          >
+            <div
+              class="ant-col ant-col-8 gutter-row"
+              style="padding-left: 8px; padding-right: 8px;"
+            >
+              <div
+                class="ant-card"
+              >
+                <div
+                  class="ant-card-head"
+                >
+                  <div
+                    class="ant-card-head-wrapper"
+                  >
+                    <div
+                      class="ant-card-head-title"
+                    >
+                      Available Rooms
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="ant-card-body"
+                >
+                  <form
+                    class="ant-form ant-form-horizontal"
+                    id="customized_form_controls"
+                  >
+                    <div
+                      class="ant-row ant-form-item"
+                    >
+                      <div
+                        class="ant-col ant-form-item-label"
+                      >
+                        <label
+                          class=""
+                          for="customized_form_controls_premium"
+                          title="Premiun"
+                        >
+                          Premiun
+                        </label>
+                      </div>
+                      <div
+                        class="ant-col ant-form-item-control"
+                      >
+                        <div
+                          class="ant-form-item-control-input"
+                        >
+                          <div
+                            class="ant-form-item-control-input-content"
+                          >
+                            <div
+                              class="ant-input-number"
+                            >
+                              <div
+                                class="ant-input-number-handler-wrap"
+                              >
+                                <span
+                                  aria-label="Increase Value"
+                                  class="ant-input-number-handler ant-input-number-handler-up"
+                                  role="button"
+                                  unselectable="unselectable"
+                                >
+                                  <span
+                                    aria-label="up"
+                                    class="anticon anticon-up ant-input-number-handler-up-inner"
+                                    role="img"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class=""
+                                      data-icon="up"
+                                      fill="currentColor"
+                                      focusable="false"
+                                      height="1em"
+                                      viewBox="64 64 896 896"
+                                      width="1em"
+                                    >
+                                      <path
+                                        d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                                      />
+                                    </svg>
+                                  </span>
+                                </span>
+                                <span
+                                  aria-disabled="true"
+                                  aria-label="Decrease Value"
+                                  class="ant-input-number-handler ant-input-number-handler-down ant-input-number-handler-down-disabled"
+                                  role="button"
+                                  unselectable="unselectable"
+                                >
+                                  <span
+                                    aria-label="down"
+                                    class="anticon anticon-down ant-input-number-handler-down-inner"
+                                    role="img"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class=""
+                                      data-icon="down"
+                                      fill="currentColor"
+                                      focusable="false"
+                                      height="1em"
+                                      viewBox="64 64 896 896"
+                                      width="1em"
+                                    >
+                                      <path
+                                        d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                      />
+                                    </svg>
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="ant-input-number-input-wrap"
+                              >
+                                <input
+                                  aria-valuemax="999"
+                                  aria-valuemin="0"
+                                  aria-valuenow="0"
+                                  autocomplete="off"
+                                  class="ant-input-number-input"
+                                  id="customized_form_controls_premium"
+                                  max="999"
+                                  min="0"
+                                  role="spinbutton"
+                                  step="1"
+                                  type="number"
+                                  value="0"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="ant-row ant-form-item"
+                    >
+                      <div
+                        class="ant-col ant-form-item-label"
+                      >
+                        <label
+                          class=""
+                          for="customized_form_controls_economy"
+                          title="Economy"
+                        >
+                          Economy
+                        </label>
+                      </div>
+                      <div
+                        class="ant-col ant-form-item-control"
+                      >
+                        <div
+                          class="ant-form-item-control-input"
+                        >
+                          <div
+                            class="ant-form-item-control-input-content"
+                          >
+                            <div
+                              class="ant-input-number"
+                            >
+                              <div
+                                class="ant-input-number-handler-wrap"
+                              >
+                                <span
+                                  aria-label="Increase Value"
+                                  class="ant-input-number-handler ant-input-number-handler-up"
+                                  role="button"
+                                  unselectable="unselectable"
+                                >
+                                  <span
+                                    aria-label="up"
+                                    class="anticon anticon-up ant-input-number-handler-up-inner"
+                                    role="img"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class=""
+                                      data-icon="up"
+                                      fill="currentColor"
+                                      focusable="false"
+                                      height="1em"
+                                      viewBox="64 64 896 896"
+                                      width="1em"
+                                    >
+                                      <path
+                                        d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                                      />
+                                    </svg>
+                                  </span>
+                                </span>
+                                <span
+                                  aria-disabled="true"
+                                  aria-label="Decrease Value"
+                                  class="ant-input-number-handler ant-input-number-handler-down ant-input-number-handler-down-disabled"
+                                  role="button"
+                                  unselectable="unselectable"
+                                >
+                                  <span
+                                    aria-label="down"
+                                    class="anticon anticon-down ant-input-number-handler-down-inner"
+                                    role="img"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class=""
+                                      data-icon="down"
+                                      fill="currentColor"
+                                      focusable="false"
+                                      height="1em"
+                                      viewBox="64 64 896 896"
+                                      width="1em"
+                                    >
+                                      <path
+                                        d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                      />
+                                    </svg>
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="ant-input-number-input-wrap"
+                              >
+                                <input
+                                  aria-valuemax="999"
+                                  aria-valuemin="0"
+                                  aria-valuenow="0"
+                                  autocomplete="off"
+                                  class="ant-input-number-input"
+                                  id="customized_form_controls_economy"
+                                  max="999"
+                                  min="0"
+                                  role="spinbutton"
+                                  step="1"
+                                  type="number"
+                                  value="0"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="ant-row ant-form-item"
+                    >
+                      <div
+                        class="ant-col ant-form-item-control"
+                      >
+                        <div
+                          class="ant-form-item-control-input"
+                        >
+                          <div
+                            class="ant-form-item-control-input-content"
+                          >
+                            <button
+                              class="ant-btn ant-btn-primary"
+                              type="submit"
+                            >
+                              <span>
+                                Submit
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-divider ant-divider-horizontal"
+            role="separator"
+            style="color: rgb(51, 51, 51); font-weight: normal;"
+          />
+          <div
+            class="ant-row"
+            style="margin-left: -8px; margin-right: -8px;"
+          >
+            <div
+              class="ant-col ant-col-8"
+              style="padding-left: 8px; padding-right: 8px;"
+            >
+              <div
+                class="ant-card"
+              >
+                <div
+                  class="ant-card-head"
+                >
+                  <div
+                    class="ant-card-head-wrapper"
+                  >
+                    <div
+                      class="ant-card-head-title"
+                    >
+                      Premiun
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="ant-card-body"
+                >
+                  <p>
+                    free: 0
+                  </p>
+                  <p>
+                    usage: 0
+                  </p>
+                  <p>
+                    revenue: 0 EURO
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="ant-col ant-col-8"
+              style="padding-left: 8px; padding-right: 8px;"
+            >
+              <div
+                class="ant-card"
+              >
+                <div
+                  class="ant-card-head"
+                >
+                  <div
+                    class="ant-card-head-wrapper"
+                  >
+                    <div
+                      class="ant-card-head-title"
+                    >
+                      Economy
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="ant-card-body"
+                >
+                  <p>
+                    free: 0
+                  </p>
+                  <p>
+                    usage: 0
+                  </p>
+                  <p>
+                    revenue: 0 EURO
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+      <footer
+        class="ant-layout-footer"
+      >
+        Credits
+      </footer>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

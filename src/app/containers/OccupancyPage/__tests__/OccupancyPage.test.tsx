@@ -1,14 +1,52 @@
 import React from 'react';
-import { createRenderer } from 'react-test-renderer/shallow';
-
+import { Store } from '@reduxjs/toolkit';
+import { render, fireEvent } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { HelmetProvider } from 'react-helmet-async';
+import { configureAppStore } from 'store/configureStore';
+import { initialState } from '../slice';
 import { OccupancyPage } from '../index';
 
-const renderer = createRenderer();
+// Mock method which is not implemented in JSDOM
+// https://jestjs.io/docs/en/manual-mocks#mocking-methods-which-are-not-implemented-in-jsdom
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
+
+const renderOccupancyPage = (store: Store) =>
+  render(
+    <Provider store={store}>
+      <HelmetProvider>
+        <OccupancyPage />
+      </HelmetProvider>
+    </Provider>,
+  );
 
 describe('<OccupancyPage />', () => {
+  let store: ReturnType<typeof configureAppStore>;
+  let component: ReturnType<typeof renderOccupancyPage>;
+
+  beforeEach(() => {
+    store = configureAppStore();
+    component = renderOccupancyPage(store);
+    expect(store.getState().occupancy).toEqual(initialState);
+  });
+  afterEach(() => {
+    component.unmount();
+  });
+
   it('should render and match the snapshot', () => {
-    renderer.render(<OccupancyPage />);
-    const renderedOutput = renderer.getRenderOutput();
-    expect(renderedOutput).toMatchSnapshot();
+    const component = renderOccupancyPage(store);
+    expect(component).toMatchSnapshot();
   });
 });
