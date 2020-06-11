@@ -1,26 +1,47 @@
+import sortBy from 'lodash/sortBy';
 import { RoomType, RevenueRoomType, BookingState } from './types';
 
 const MAX_AMOUNT_EURO_PREMIUM = 100;
 
-export const initialRevenueRoom: RevenueRoomType = {
+export const initialRevenueRoomState: RevenueRoomType = {
   [RoomType.PREMIUM]: { usage: 0, total: 0, currency: 'EURO' },
   [RoomType.ECONOMY]: { usage: 0, total: 0, currency: 'EURO' },
 };
 
-const mookRevenueRoomResult: RevenueRoomType = {
-  premium: {
-    usage: 3,
-    total: 738,
-    currency: 'EURO',
-  },
-  economy: {
-    usage: 3,
-    total: 167,
-    currency: 'EURO',
-  },
-};
-
 export const revenueRoomReducer = (
   occupancyState: BookingState,
-  initialRoomOccupancyState: RevenueRoomType,
-): RevenueRoomType => mookRevenueRoomResult;
+  revenueRoomState: RevenueRoomType,
+): RevenueRoomType => {
+  return sortBy(occupancyState.guests)
+    .reverse()
+    .reduce(
+      (prev: RevenueRoomType, curr: number, index: number): RevenueRoomType => {
+        const newOccupation = { ...prev };
+
+        if (
+          (curr >= MAX_AMOUNT_EURO_PREMIUM &&
+            occupancyState.availableRooms.premium >
+              newOccupation.premium.usage) ||
+          (curr < MAX_AMOUNT_EURO_PREMIUM &&
+            occupancyState.availableRooms.premium >
+              newOccupation.premium.usage &&
+            occupancyState.availableRooms.economy <
+              occupancyState.guests.length - index + 1)
+        ) {
+          newOccupation.premium.usage += 1;
+          newOccupation.premium.total += curr;
+        } else if (
+          curr < MAX_AMOUNT_EURO_PREMIUM &&
+          occupancyState.availableRooms.economy > newOccupation.economy.usage
+        ) {
+          newOccupation.economy.usage += 1;
+          newOccupation.economy.total += curr;
+        }
+
+        return {
+          ...newOccupation,
+        };
+      },
+      revenueRoomState,
+    );
+};

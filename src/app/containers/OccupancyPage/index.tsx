@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Row, Col, Divider, Layout, PageHeader } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
@@ -31,10 +31,6 @@ export const OccupancyPage = () => {
     dispatch(actions.loadGuests());
     dispatch(actions.updateAvailableRoomsForm(values));
   };
-
-  // useEffect(() => {
-  //   dispatch(actions.loadGuests());
-  // }, [dispatch]);
 
   return (
     <>
