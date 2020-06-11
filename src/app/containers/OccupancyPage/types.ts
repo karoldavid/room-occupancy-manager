@@ -3,6 +3,16 @@ export enum RoomType {
   ECONOMY = 'economy',
 }
 
+export interface AvailableRooms {
+  [name: string]: number;
+}
+
+export interface AvailableRoomsFormValues {
+  [name: string]: {
+    value: number;
+  };
+}
+
 export interface Revenue {
   free: number;
   usage: number;

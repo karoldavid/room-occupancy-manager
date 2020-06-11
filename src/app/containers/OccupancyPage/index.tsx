@@ -2,9 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Row, Col, Divider, Layout, PageHeader } from 'antd';
 import { RevenueDetails } from './RevenueDetails';
-import { RoomType } from './types';
-import { revenueDetailsData } from './mock/revenueDetailsData';
+import { AvailableRooms, RoomType } from './types';
+import { AvailableRoomsForm } from './AvailableRoomsForm';
 import { revenueDetailsTitles } from './constants';
+
+import { revenueDetailsData } from './mock/revenueDetailsData';
 
 const { Footer, Content } = Layout;
 
@@ -12,6 +14,11 @@ const PREMIUM = RoomType.PREMIUM;
 const ECONOMY = RoomType.ECONOMY;
 
 export const OccupancyPage = () => {
+  const onSubmitForm = (values: AvailableRooms) => {
+    // eslint-disable-next-line no-console
+    console.log(values);
+  };
+
   return (
     <>
       <Helmet>
@@ -32,7 +39,10 @@ export const OccupancyPage = () => {
           <Content style={{ padding: '0 50px' }}>
             <Row gutter={16}>
               <Col className="gutter-row" span={8}>
-                Room Occupancy Form Component
+                <AvailableRoomsForm
+                  title="Available Rooms"
+                  onFinish={onSubmitForm}
+                />
               </Col>
             </Row>
             <Divider
