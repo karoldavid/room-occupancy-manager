@@ -25,10 +25,10 @@ const initialFormState: AvailableRoomsFormValues = {
   },
 };
 
-export const AvailableRoomsForm: React.FC<AvailableRoomsFormProps> = ({
+export function AvailableRoomsForm({
   title,
   onFinish,
-}) => {
+}: AvailableRoomsFormProps) {
   const [number, setNumber] = useState(initialFormState);
 
   const checkRoomNumber = (rule, value: number): Promise<void> => {
@@ -97,4 +97,4 @@ export const AvailableRoomsForm: React.FC<AvailableRoomsFormProps> = ({
       </Form>
     </Card>
   );
-};
+}

@@ -44,7 +44,10 @@ exports[`<OccupancyPage /> should render and match the snapshot 1`] = `
             className="gutter-row"
             span={8}
           >
-            Room Occupancy Form Component
+            <AvailableRoomsForm
+              onFinish={[Function]}
+              title="Available Rooms"
+            />
           </Col>
         </Row>
         <Divider
@@ -62,12 +65,32 @@ exports[`<OccupancyPage /> should render and match the snapshot 1`] = `
           <Col
             span={8}
           >
-            Revenue Details Component - Premium
+            <RevenueDetails
+              data={
+                Object {
+                  "currency": "EURO",
+                  "free": 0,
+                  "total": 0,
+                  "usage": 0,
+                }
+              }
+              title="Premiun"
+            />
           </Col>
           <Col
             span={8}
           >
-            Revenue Details Component - Economy
+            <RevenueDetails
+              data={
+                Object {
+                  "currency": "EURO",
+                  "free": 0,
+                  "total": 0,
+                  "usage": 0,
+                }
+              }
+              title="Economy"
+            />
           </Col>
         </Row>
       </Content>
