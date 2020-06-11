@@ -3,6 +3,11 @@ export enum RoomType {
   ECONOMY = 'economy',
 }
 
+export enum GuestsErrorType {
+  RESPONSE_ERROR = 1,
+  GUESTS_NOT_FOUND = 2,
+}
+
 export interface AvailableRooms {
   [name: string]: number;
 }
@@ -29,4 +34,9 @@ export interface BookingState {
   guests: number[];
 }
 
-export type ContainerState = BookingState;
+export interface OccupancyState extends BookingState {
+  loading: boolean;
+  error?: GuestsErrorType | null;
+}
+
+export type ContainerState = OccupancyState;

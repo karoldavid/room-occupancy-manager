@@ -1,10 +1,17 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from 'utils/@reduxjs/toolkit';
-import { ContainerState, AvailableRooms, RoomType } from './types';
+import {
+  ContainerState,
+  AvailableRooms,
+  RoomType,
+  GuestsErrorType,
+} from './types';
 
 export const initialState: ContainerState = {
   availableRooms: { [RoomType.PREMIUM]: 0, [RoomType.ECONOMY]: 0 },
   guests: [],
+  loading: false,
+  error: null,
 };
 
 const occupancySlice = createSlice({
@@ -13,6 +20,16 @@ const occupancySlice = createSlice({
   reducers: {
     updateAvailableRoomsForm(state, action: PayloadAction<AvailableRooms>) {
       state.availableRooms = action.payload;
+    },
+    loadGuests(state) {
+      state.guests = [];
+    },
+    guestsLoaded(state, action: PayloadAction<number[]>) {
+      state.guests = action.payload;
+    },
+    guestsError(state, action: PayloadAction<GuestsErrorType>) {
+      state.error = action.payload;
+      state.loading = false;
     },
   },
 });

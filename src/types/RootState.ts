@@ -1,5 +1,5 @@
-import { BookingState } from 'app/containers/OccupancyPage/types';
+import { OccupancyState } from 'app/containers/OccupancyPage/types';
 
 export interface RootState {
-  occupancy: BookingState;
+  occupancy: OccupancyState;
 }

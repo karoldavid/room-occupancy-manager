@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Row, Col, Divider, Layout, PageHeader } from 'antd';
 import { useDispatch } from 'react-redux';
-import { useInjectReducer } from 'utils/redux-injectors';
+import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';
 import { sliceKey, reducer, actions } from './slice';
+import { occupancySaga } from './saga';
 import { RevenueDetails } from './RevenueDetails';
 import { AvailableRooms, RoomType } from './types';
 import { AvailableRoomsForm } from './AvailableRoomsForm';
@@ -18,11 +19,16 @@ const ECONOMY = RoomType.ECONOMY;
 
 export const OccupancyPage = () => {
   useInjectReducer({ key: sliceKey, reducer: reducer });
+  useInjectSaga({ key: sliceKey, saga: occupancySaga });
   const dispatch = useDispatch();
 
   const onSubmitForm = (values: AvailableRooms) => {
     dispatch(actions.updateAvailableRoomsForm(values));
   };
+
+  useEffect(() => {
+    dispatch(actions.loadGuests());
+  }, [dispatch]);
 
   return (
     <>
