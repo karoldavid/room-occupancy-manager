@@ -19,7 +19,7 @@ export interface AvailableRoomsFormValues {
 }
 
 export interface Revenue {
-  free: number;
+  free?: number;
   usage: number;
   total: number;
   currency: string;

@@ -32,11 +32,9 @@ export const OccupancyPage = () => {
     dispatch(actions.updateAvailableRoomsForm(values));
   };
 
-  useEffect(() => {
-    dispatch(actions.loadGuests());
-  }, [dispatch]);
-
-  console.log(loading);
+  // useEffect(() => {
+  //   dispatch(actions.loadGuests());
+  // }, [dispatch]);
 
   return (
     <>
