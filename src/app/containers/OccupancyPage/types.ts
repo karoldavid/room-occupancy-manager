@@ -23,3 +23,10 @@ export interface Revenue {
 export type RevenueRoomType = {
   [key in RoomType]: Revenue;
 };
+
+export interface BookingState {
+  availableRooms: AvailableRooms;
+  guests: number[];
+}
+
+export type ContainerState = BookingState;

@@ -1,6 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Row, Col, Divider, Layout, PageHeader } from 'antd';
+import { useDispatch } from 'react-redux';
+import { useInjectReducer } from 'utils/redux-injectors';
+import { sliceKey, reducer, actions } from './slice';
 import { RevenueDetails } from './RevenueDetails';
 import { AvailableRooms, RoomType } from './types';
 import { AvailableRoomsForm } from './AvailableRoomsForm';
@@ -14,9 +17,11 @@ const PREMIUM = RoomType.PREMIUM;
 const ECONOMY = RoomType.ECONOMY;
 
 export const OccupancyPage = () => {
+  useInjectReducer({ key: sliceKey, reducer: reducer });
+  const dispatch = useDispatch();
+
   const onSubmitForm = (values: AvailableRooms) => {
-    // eslint-disable-next-line no-console
-    console.log(values);
+    dispatch(actions.updateAvailableRoomsForm(values));
   };
 
   return (
