@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Row, Col, Divider, Layout, PageHeader } from 'antd';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';
 import { sliceKey, reducer, actions } from './slice';
 import { occupancySaga } from './saga';
+import { selectLoading } from './selectors';
 import { RevenueDetails } from './RevenueDetails';
 import { AvailableRooms, RoomType } from './types';
+import { LoadingIndicator } from '../../components/LoadingIndicator';
 import { AvailableRoomsForm } from './AvailableRoomsForm';
 import { revenueDetailsTitles } from './constants';
 
@@ -20,15 +22,21 @@ const ECONOMY = RoomType.ECONOMY;
 export const OccupancyPage = () => {
   useInjectReducer({ key: sliceKey, reducer: reducer });
   useInjectSaga({ key: sliceKey, saga: occupancySaga });
+
+  const loading = useSelector(selectLoading);
+
   const dispatch = useDispatch();
 
   const onSubmitForm = (values: AvailableRooms) => {
+    dispatch(actions.loadGuests());
     dispatch(actions.updateAvailableRoomsForm(values));
   };
 
   useEffect(() => {
     dispatch(actions.loadGuests());
   }, [dispatch]);
+
+  console.log(loading);
 
   return (
     <>
@@ -37,6 +45,7 @@ export const OccupancyPage = () => {
         <meta name="description" content="Room Occupancy Manager" />
       </Helmet>
       <Layout>
+        {loading && <LoadingIndicator />}
         <PageHeader
           className="site-page-header"
           title="Room Occupation Manager"

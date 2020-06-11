@@ -23,9 +23,13 @@ const occupancySlice = createSlice({
     },
     loadGuests(state) {
       state.guests = [];
+      state.loading = true;
+      state.error = null;
     },
     guestsLoaded(state, action: PayloadAction<number[]>) {
       state.guests = action.payload;
+      state.loading = false;
+      state.error = null;
     },
     guestsError(state, action: PayloadAction<GuestsErrorType>) {
       state.error = action.payload;
