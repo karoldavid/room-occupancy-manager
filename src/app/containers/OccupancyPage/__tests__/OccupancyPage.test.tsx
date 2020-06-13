@@ -4,7 +4,7 @@ import { render, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { HelmetProvider } from 'react-helmet-async';
 import { configureAppStore } from 'store/configureStore';
-import { initialState } from '../slice';
+import { actions, initialState } from '../slice';
 import { OccupancyPage } from '../index';
 
 // Mock method which is not implemented in JSDOM
@@ -48,5 +48,12 @@ describe('<OccupancyPage />', () => {
   it('should render and match the snapshot', () => {
     const component = renderOccupancyPage(store);
     expect(component).toMatchSnapshot();
+  });
+
+  it('should display loading indicator when state is loading', () => {
+    store.dispatch(actions.loadGuests());
+    expect(
+      component.container.querySelector('.ant-spin-spinning'),
+    ).toBeInTheDocument();
   });
 });

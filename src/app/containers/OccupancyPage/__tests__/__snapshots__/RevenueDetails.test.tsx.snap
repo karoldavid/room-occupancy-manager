@@ -21,13 +21,13 @@ exports[`<RevenueDetails /> should match the snapshot 1`] = `
     class="ant-card-body"
   >
     <p>
-      free: 4
+      Free: 4
     </p>
     <p>
-      usage: 3
+      Usage: 3
     </p>
     <p>
-      revenue: 1234 EURO
+      Revenue: 1234 EURO
     </p>
   </div>
 </div>

@@ -319,16 +319,6 @@ Object {
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="ant-divider ant-divider-horizontal"
-              role="separator"
-              style="color: rgb(51, 51, 51); font-weight: normal;"
-            />
-            <div
-              class="ant-row"
-              style="margin-left: -8px; margin-right: -8px;"
-            >
               <div
                 class="ant-col ant-col-8"
                 style="padding-left: 8px; padding-right: 8px;"
@@ -353,13 +343,13 @@ Object {
                     class="ant-card-body"
                   >
                     <p>
-                      free: 0
+                      Free: 0
                     </p>
                     <p>
-                      usage: 0
+                      Usage: 0
                     </p>
                     <p>
-                      revenue: 0 EURO
+                      Revenue: 0 EURO
                     </p>
                   </div>
                 </div>
@@ -388,18 +378,23 @@ Object {
                     class="ant-card-body"
                   >
                     <p>
-                      free: 0
+                      Free: 0
                     </p>
                     <p>
-                      usage: 0
+                      Usage: 0
                     </p>
                     <p>
-                      revenue: 0 EURO
+                      Revenue: 0 EURO
                     </p>
                   </div>
                 </div>
               </div>
             </div>
+            <div
+              class="ant-divider ant-divider-horizontal"
+              role="separator"
+              style="color: rgb(51, 51, 51); font-weight: normal;"
+            />
           </main>
         </section>
         <footer
@@ -724,16 +719,6 @@ Object {
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="ant-divider ant-divider-horizontal"
-              role="separator"
-              style="color: rgb(51, 51, 51); font-weight: normal;"
-            />
-            <div
-              class="ant-row"
-              style="margin-left: -8px; margin-right: -8px;"
-            >
               <div
                 class="ant-col ant-col-8"
                 style="padding-left: 8px; padding-right: 8px;"
@@ -758,13 +743,13 @@ Object {
                     class="ant-card-body"
                   >
                     <p>
-                      free: 0
+                      Free: 0
                     </p>
                     <p>
-                      usage: 0
+                      Usage: 0
                     </p>
                     <p>
-                      revenue: 0 EURO
+                      Revenue: 0 EURO
                     </p>
                   </div>
                 </div>
@@ -793,18 +778,23 @@ Object {
                     class="ant-card-body"
                   >
                     <p>
-                      free: 0
+                      Free: 0
                     </p>
                     <p>
-                      usage: 0
+                      Usage: 0
                     </p>
                     <p>
-                      revenue: 0 EURO
+                      Revenue: 0 EURO
                     </p>
                   </div>
                 </div>
               </div>
             </div>
+            <div
+              class="ant-divider ant-divider-horizontal"
+              role="separator"
+              style="color: rgb(51, 51, 51); font-weight: normal;"
+            />
           </main>
         </section>
         <footer
@@ -1130,16 +1120,6 @@ Object {
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="ant-divider ant-divider-horizontal"
-            role="separator"
-            style="color: rgb(51, 51, 51); font-weight: normal;"
-          />
-          <div
-            class="ant-row"
-            style="margin-left: -8px; margin-right: -8px;"
-          >
             <div
               class="ant-col ant-col-8"
               style="padding-left: 8px; padding-right: 8px;"
@@ -1164,13 +1144,13 @@ Object {
                   class="ant-card-body"
                 >
                   <p>
-                    free: 0
+                    Free: 0
                   </p>
                   <p>
-                    usage: 0
+                    Usage: 0
                   </p>
                   <p>
-                    revenue: 0 EURO
+                    Revenue: 0 EURO
                   </p>
                 </div>
               </div>
@@ -1199,18 +1179,23 @@ Object {
                   class="ant-card-body"
                 >
                   <p>
-                    free: 0
+                    Free: 0
                   </p>
                   <p>
-                    usage: 0
+                    Usage: 0
                   </p>
                   <p>
-                    revenue: 0 EURO
+                    Revenue: 0 EURO
                   </p>
                 </div>
               </div>
             </div>
           </div>
+          <div
+            class="ant-divider ant-divider-horizontal"
+            role="separator"
+            style="color: rgb(51, 51, 51); font-weight: normal;"
+          />
         </main>
       </section>
       <footer
