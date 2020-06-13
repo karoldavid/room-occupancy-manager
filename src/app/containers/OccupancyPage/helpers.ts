@@ -1,5 +1,10 @@
 import sortBy from 'lodash/sortBy';
-import { RoomType, RevenueRoomType, BookingState } from './types';
+import {
+  AvailableRooms,
+  RoomType,
+  RevenueRoomType,
+  BookingState,
+} from './types';
 
 const MAX_AMOUNT_EURO_PREMIUM = 100;
 
@@ -45,3 +50,11 @@ export const revenueRoomReducer = (
       revenueRoomState,
     );
 };
+
+export const getDetailsDataByCategory = (category: RoomType) => (
+  revenueRoom: RevenueRoomType,
+  availableRooms: AvailableRooms,
+) => ({
+  ...revenueRoom[category],
+  free: availableRooms[category],
+});

@@ -1,18 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Row, Col, Divider, Layout, PageHeader } from 'antd';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';
 import { sliceKey, reducer, actions } from './slice';
 import { occupancySaga } from './saga';
-import { selectLoading } from './selectors';
-import { RevenueDetails } from './RevenueDetails';
-import { AvailableRooms, RoomType } from './types';
+import {
+  selectLoading,
+  selectAvailableRooms,
+  selectRevenueRoom,
+} from './selectors';
+import { AvailableRooms, RoomType, RevenueRoomType } from './types';
+import { getDetailsDataByCategory } from './helpers';
 import { LoadingIndicator } from '../../components/LoadingIndicator';
 import { AvailableRoomsForm } from './AvailableRoomsForm';
+import { RevenueDetails } from './RevenueDetails';
 import { revenueDetailsTitles } from './constants';
-
-import { revenueDetailsData } from './mock/revenueDetailsData';
 
 const { Footer, Content } = Layout;
 
@@ -24,6 +27,8 @@ export const OccupancyPage = () => {
   useInjectSaga({ key: sliceKey, saga: occupancySaga });
 
   const loading = useSelector(selectLoading);
+  const availableRooms = useSelector(selectAvailableRooms);
+  const revenueRoom = useSelector(selectRevenueRoom);
 
   const dispatch = useDispatch();
 
@@ -66,13 +71,19 @@ export const OccupancyPage = () => {
             <Row gutter={16}>
               <Col span={8}>
                 <RevenueDetails
-                  data={revenueDetailsData[PREMIUM]}
+                  data={getDetailsDataByCategory(PREMIUM)(
+                    revenueRoom,
+                    availableRooms,
+                  )}
                   title={revenueDetailsTitles[PREMIUM]}
                 />
               </Col>
               <Col span={8}>
                 <RevenueDetails
-                  data={revenueDetailsData[ECONOMY]}
+                  data={getDetailsDataByCategory(ECONOMY)(
+                    revenueRoom,
+                    availableRooms,
+                  )}
                   title={revenueDetailsTitles[ECONOMY]}
                 />
               </Col>
