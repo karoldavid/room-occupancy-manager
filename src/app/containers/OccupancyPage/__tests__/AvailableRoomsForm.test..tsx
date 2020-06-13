@@ -1,23 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent, waitFor } from '@testing-library/react';
 import { AvailableRoomsForm } from '../AvailableRoomsForm';
 import { AvailableRooms } from '../types';
-
-// Mock method which is not implemented in JSDOM
-// https://jestjs.io/docs/en/manual-mocks#mocking-methods-which-are-not-implemented-in-jsdom
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
 
 const renderAvailableRoomsForm = (
   props: Parameters<typeof AvailableRoomsForm>[number],
@@ -48,5 +32,34 @@ describe('<AvailableRoomsForm />', () => {
     expect(availableRoomsForm.container.querySelectorAll('input').length).toBe(
       2,
     );
+  });
+
+  it('calls handleSubmit with the correct values', async () => {
+    const handleSubmit = jest.fn();
+
+    const props = {
+      onFinish: handleSubmit,
+      title: 'Test',
+    };
+    const { getByPlaceholderText, getByTestId } = renderAvailableRoomsForm(
+      props,
+    );
+
+    fireEvent.change(getByTestId('premium'), {
+      target: { value: 3 },
+    });
+
+    fireEvent.change(getByTestId('economy'), {
+      target: { value: 7 },
+    });
+
+    fireEvent.submit(getByTestId('submit'));
+
+    await waitFor(() => {
+      expect(handleSubmit).toHaveBeenCalledWith({
+        premium: 3,
+        economy: 7,
+      });
+    });
   });
 });

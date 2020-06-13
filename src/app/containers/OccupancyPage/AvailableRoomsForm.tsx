@@ -69,6 +69,7 @@ export function AvailableRoomsForm({
             max={999}
             value={number[premium].value}
             onChange={onNumberChange(premium)}
+            data-testid="premium"
           />
         </Form.Item>
         <Form.Item
@@ -87,10 +88,11 @@ export function AvailableRoomsForm({
             max={999}
             value={number[economy].value}
             onChange={onNumberChange(economy)}
+            data-testid="economy"
           />
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" data-testid="submit">
             Submit
           </Button>
         </Form.Item>

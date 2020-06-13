@@ -118,6 +118,7 @@ exports[`<AvailableRoomsForm /> should match the snapshot 1`] = `
                     aria-valuenow="0"
                     autocomplete="off"
                     class="ant-input-number-input"
+                    data-testid="premium"
                     id="customized_form_controls_premium"
                     max="999"
                     min="0"
@@ -226,6 +227,7 @@ exports[`<AvailableRoomsForm /> should match the snapshot 1`] = `
                     aria-valuenow="0"
                     autocomplete="off"
                     class="ant-input-number-input"
+                    data-testid="economy"
                     id="customized_form_controls_economy"
                     max="999"
                     min="0"
@@ -254,6 +256,7 @@ exports[`<AvailableRoomsForm /> should match the snapshot 1`] = `
             >
               <button
                 class="ant-btn ant-btn-primary"
+                data-testid="submit"
                 type="submit"
               >
                 <span>
