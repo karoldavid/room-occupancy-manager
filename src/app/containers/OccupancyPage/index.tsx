@@ -63,31 +63,31 @@ export const OccupancyPage = () => {
                   onFinish={onSubmitForm}
                 />
               </Col>
+              <Col span={8}>
+                <RevenueDetails
+                  loading={loading}
+                  title={revenueDetailsTitles[PREMIUM]}
+                  data={getDetailsDataByCategory(PREMIUM)(
+                    revenueRoom,
+                    availableRooms,
+                  )}
+                />
+              </Col>
+              <Col span={8}>
+                <RevenueDetails
+                  loading={loading}
+                  title={revenueDetailsTitles[ECONOMY]}
+                  data={getDetailsDataByCategory(ECONOMY)(
+                    revenueRoom,
+                    availableRooms,
+                  )}
+                />
+              </Col>
             </Row>
             <Divider
               orientation="left"
               style={{ color: '#333', fontWeight: 'normal' }}
             />
-            <Row gutter={16}>
-              <Col span={8}>
-                <RevenueDetails
-                  data={getDetailsDataByCategory(PREMIUM)(
-                    revenueRoom,
-                    availableRooms,
-                  )}
-                  title={revenueDetailsTitles[PREMIUM]}
-                />
-              </Col>
-              <Col span={8}>
-                <RevenueDetails
-                  data={getDetailsDataByCategory(ECONOMY)(
-                    revenueRoom,
-                    availableRooms,
-                  )}
-                  title={revenueDetailsTitles[ECONOMY]}
-                />
-              </Col>
-            </Row>
           </Content>
         </Layout>
         <Footer>Credits</Footer>

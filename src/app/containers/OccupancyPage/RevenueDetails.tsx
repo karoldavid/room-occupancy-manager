@@ -1,18 +1,27 @@
 import React from 'react';
 import { Revenue } from './types';
-import { Card } from 'antd';
+import { Card, Skeleton } from 'antd';
 
 export interface RevenueDetailsProps {
   data: Revenue;
   title: string;
+  loading?: boolean;
 }
 
-export function RevenueDetails({ data, title }: RevenueDetailsProps) {
+const Content = ({ free, usage, total, currency }: Revenue) => (
+  <>
+    <p>{`Free: ${free}`}</p>
+    <p>{`Usage: ${usage}`}</p>
+    <p>{`Revenue: ${total} ${currency}`}</p>
+  </>
+);
+
+export function RevenueDetails({ loading, title, data }: RevenueDetailsProps) {
   return (
     <Card title={title} bordered={false}>
-      <p>{`free: ${data.free}`}</p>
-      <p>{`usage: ${data.usage}`}</p>
-      <p>{`revenue: ${data.total} ${data.currency}`}</p>
+      <Skeleton loading={loading} active>
+        <Content {...data} />
+      </Skeleton>
     </Card>
   );
 }
