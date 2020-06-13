@@ -21,6 +21,14 @@ export function* getGuests() {
   }
 }
 
+export function* getDataForRoomRevenueCalculation() {
+  yield put(actions.loadGuests());
+}
+
 export function* occupancySaga() {
   yield takeLatest(actions.loadGuests.type, getGuests);
+  yield takeLatest(
+    actions.updateAvailableRoomsForm.type,
+    getDataForRoomRevenueCalculation,
+  );
 }

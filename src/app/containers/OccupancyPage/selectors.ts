@@ -1,5 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { revenueRoomReducer, initialRevenueRoomState } from './helpers';
+import { RoomType } from './types';
+import { revenueRoomReducer } from './helpers';
 
 import { RootState } from 'types';
 import { initialState } from './slice';
@@ -23,5 +24,9 @@ export const selectAvailableRooms = createSelector(
 
 export const selectRevenueRoom = createSelector(
   [selectDomain],
-  occupancyState => revenueRoomReducer(occupancyState, initialRevenueRoomState),
+  occupancyState =>
+    revenueRoomReducer(occupancyState, {
+      [RoomType.PREMIUM]: { usage: 0, total: 0, currency: 'EURO' },
+      [RoomType.ECONOMY]: { usage: 0, total: 0, currency: 'EURO' },
+    }),
 );

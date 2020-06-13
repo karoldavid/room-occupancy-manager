@@ -8,11 +8,6 @@ import {
 
 const MAX_AMOUNT_EURO_PREMIUM = 100;
 
-export const initialRevenueRoomState: RevenueRoomType = {
-  [RoomType.PREMIUM]: { usage: 0, total: 0, currency: 'EURO' },
-  [RoomType.ECONOMY]: { usage: 0, total: 0, currency: 'EURO' },
-};
-
 export const revenueRoomReducer = (
   occupancyState: BookingState,
   revenueRoomState: RevenueRoomType,
@@ -47,7 +42,9 @@ export const revenueRoomReducer = (
           ...newOccupation,
         };
       },
-      revenueRoomState,
+      {
+        ...revenueRoomState,
+      },
     );
 };
 

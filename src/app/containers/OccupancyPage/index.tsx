@@ -33,7 +33,6 @@ export const OccupancyPage = () => {
   const dispatch = useDispatch();
 
   const onSubmitForm = (values: AvailableRooms) => {
-    dispatch(actions.loadGuests());
     dispatch(actions.updateAvailableRoomsForm(values));
   };
 
