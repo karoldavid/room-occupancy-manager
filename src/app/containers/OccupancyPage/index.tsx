@@ -10,7 +10,7 @@ import {
   selectAvailableRooms,
   selectRevenueRoom,
 } from './selectors';
-import { AvailableRooms, RoomType, RevenueRoomType } from './types';
+import { AvailableRooms, RoomType } from './types';
 import { getDetailsDataByCategory } from './helpers';
 import { LoadingIndicator } from '../../components/LoadingIndicator';
 import { AvailableRoomsForm } from './AvailableRoomsForm';
