@@ -20,6 +20,8 @@ A simple Room Occupancy Manager for the Hospitality Industry (coding challenge).
 
 Execute `npm run test` to watch for changes and run all tests.
 
+![Screenshot Room Occupancy Manager terminal showning tests](./src/assets/room-occupancy-manager_npm-run-test.png)
+
 ## How to use
 
 - Enter the number of available rooms for each room category.
