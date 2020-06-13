@@ -1,10 +1,10 @@
 # Room Occupancy Manager
 
-A simple Room Occupancy Manager for the Hospitality Industry (coding challenge). Click [here](https://karoldavid.github.io/room-occupancy-manager/) to see the live version.
+A simple Room Occupancy Manager for the Hospitality Industry (coding challenge).
 
 ![Screenshot Room Occupancy Manager and Redux DevTools](./src/assets/room-occupancy-manager-1.png)
 
-### Prerequisites
+## Prerequisites
 
 1. Node.js. It is recommended to use the [Node Version Manager](https://github.com/nvm-sh/nvm/blob/master/README.md).
 2. Add [Redux DevTools](https://github.com/reduxjs/redux-devtools) to the browser.
