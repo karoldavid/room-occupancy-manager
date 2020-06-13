@@ -61,19 +61,6 @@ describe('OccupancyPage selectors', () => {
         },
       };
 
-      const expectedResult = {
-        premium: {
-          usage: 3,
-          total: 738,
-          currency: 'EURO',
-        },
-        economy: {
-          usage: 3,
-          total: 167,
-          currency: 'EURO',
-        },
-      };
-
       expectedProperties.forEach((name, index) => {
         expect(selectors.selectRevenueRoom(state)).toHaveProperty(name);
       });

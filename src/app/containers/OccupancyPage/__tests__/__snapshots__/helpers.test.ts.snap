@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`helpers getDetailsDataByCategory should match snapshots 1`] = `
+Object {
+  "currency": "EURO",
+  "free": 3,
+  "total": 738,
+  "usage": 3,
+}
+`;
+
+exports[`helpers getDetailsDataByCategory should match snapshots 2`] = `
+Object {
+  "currency": "EURO",
+  "free": 3,
+  "total": 167,
+  "usage": 3,
+}
+`;
